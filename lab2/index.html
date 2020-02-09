@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom demo</title>
+</head>
+<body>
+    <label>user Name: <input type="text" id="userName"></label>
+    <div class="output"></div>
+    <button class="btn">OK</button>
+
+    <script>
+        let userName = document.querySelector('#userName');
+        let output = document.querySelector('.output');
+        let btn = document.querySelector('.btn');
+
+        // define function to get value from input:
+        function onClickHandler(params) {
+            // get input value:
+            let value = userName.value;
+
+            // write to div.output:
+            output.innerHTML = value;
+        }
+
+        // add on click event to btn
+        btn.addEventListener('click',onClickHandler);
+    </script>
+</body>
+</html>
