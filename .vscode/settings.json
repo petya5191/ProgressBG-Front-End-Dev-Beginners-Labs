@@ -1,0 +1,13 @@
+{
+    "spellright.language": [],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        // "plaintext",
+        "python"
+    ],
+    "workbench.colorCustomizations": {
+        "editorError.foreground":   "#ff0000",
+        "editorWarning.foreground": "#ffe600",
+    }
+}
