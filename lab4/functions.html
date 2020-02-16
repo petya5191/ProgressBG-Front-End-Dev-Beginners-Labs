@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // decalre function add() which return sum of variable number of arguments
+        // 1. declare with "function definition"
+        // console.log( addExpression(4,44) );
+        function addDefinition() {
+            let sum = 0;
+
+            for (let i = 0; i < arguments.length; i++) {
+                const el = arguments[i];
+                sum += el;
+            }
+
+            return sum;
+        }
+
+        // 2. declare with "function expression"
+        const addExpression = function add() {
+            let sum = 0;
+
+            for (let i = 0; i < arguments.length; i++) {
+                const el = arguments[i];
+                sum += el;
+            }
+
+            return sum;
+        }
+
+        console.log(`x = ${x}`);
+
+        // use the function:
+        console.log(addExpression(2,3));
+        console.log(addDefinition(2,3,4));
+
+        var x;
+        x = 5;
+
+    </script>
+</body>
+</html>

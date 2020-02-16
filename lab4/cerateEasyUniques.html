@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['a','b','f', 'b','a','b','c'];
+        let counter = 0;
+
+        function isInArray(el, arr) {
+            for (let i = 0; i < arr.length; i++) {
+                const element = arr[i];
+                counter++;
+
+                if( element === el){
+                    return true;
+                }
+            }
+
+            // the element is not found in array:
+            return false;
+        }
+
+        function createUniqueValuesArr(arr) {
+            let uniqueValues = [];
+            for (let i = 0; i < arr.length; i++) {
+                const element = arr[i];
+
+                // if element is not in uniqueValues, then add it
+                if ( !isInArray(element, uniqueValues) ) {
+                    uniqueValues.push(element)
+                }
+            }
+
+
+           return uniqueValues;
+        }
+
+        function cerateEasyUniques(arr) {
+            let uniqueValues = new Set(arr);
+            return uniqueValues;
+        }
+
+        // console.log( isInArray('c', arr) ); //true
+        // console.log(`counter: ${counter}`); // 7 | 6 |
+        // console.log( isInArray('f', arr) ); //false
+
+       console.log( createUniqueValuesArr(arr) );
+       console.log( cerateEasyUniques(arr) );
+    </script>
+</body>
+</html>
