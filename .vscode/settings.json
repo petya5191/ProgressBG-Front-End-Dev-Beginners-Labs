@@ -1,9 +1,13 @@
 {
-    "spellright.language": [],
+    "spellright.language": [
+        "Bulgarian",
+        "English (American)"
+    ],
     "spellright.documentTypes": [
         "markdown",
         "latex",
         "plaintext",
-        "python"
+        "python",
+        "javascript"
     ]
 }
