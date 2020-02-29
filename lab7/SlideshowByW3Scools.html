@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+        .slideshow{
+            position: relative;
+            height: 8em;
+            /* border: .3em solid gray; */
+        }
+        .slideshow>div{
+            position: absolute;
+            top:0; left: 0;
+            width: 8em;
+            height: 8em;
+        }
+        .slideshow>div:nth-of-type(1){background: #FF0000;}
+        .slideshow>div:nth-of-type(2){background: #00FF00;}
+        .slideshow>div:nth-of-type(3){background: #0000FF;}
+        .slideshow>div:nth-of-type(4){background: #FF00FF;}
+    </style>
+</head>
+<body>
+    <h1>Slideshow demo</h1>
+    <p>Following <a href="https://www.w3schools.com/w3css/w3css_slideshow.asp">W3.CSS Slideshow
+    </a></p>
+
+    <div class="slideshow">
+        <div id="img1">img1</div>
+        <div id="img2">img2</div>
+        <div id="img3">img3</div>
+        <div id="img4">img4</div>
+    </div>
+    <div class="buttons">
+        <button id="left">left</button>
+        <button id="right">right</button>
+    </div>
+
+    <script>
+        function showDivs(i) {
+            let divs = document.querySelectorAll('.slideshow>div');
+
+
+            // normalize slideIndex:
+            // when "right" is clicked:
+            if (slideIndex > divs.length) {
+                slideIndex = 1;
+            };
+            if (slideIndex < 1) {
+                slideIndex = divs.length
+            };
+
+
+            // hide all:
+            for (let i = 0; i < divs.length; i++) {
+                const div = divs[i];
+                div.style.display = "none";
+            }
+
+            // show only i-th div
+            divs[slideIndex-1].style.display = "block";
+        }
+
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            showDivs(slideIndex);
+            console.log(`slideIndex = ${slideIndex}`);
+
+        }
+
+        const btnLeft = document.querySelector('#left');
+        const btnRight = document.querySelector('#right');
+
+        //main:
+        // show the first div
+        let slideIndex = 1;
+        showDivs(slideIndex);
+
+
+        btnLeft.addEventListener('click',  ()=> {
+            plusDivs(-1);
+        })
+        btnRight.addEventListener('click', ()=>{plusDivs(+1)});
+
+
+
+
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                              original code                              -->
+        <!-- ----------------------------------------------------------------------- -->
+        function demow3schools() {
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length} ;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex-1].style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+</html>
