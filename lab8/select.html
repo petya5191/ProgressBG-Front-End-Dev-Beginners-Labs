@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+   <form action="cgi-bin/login.php">
+        <label>user name: <input type="text" name="userName"></label>
+
+        <fieldset>
+            <legend>gender</legend>
+            <label>male: <input type="radio" value="m" name="gender"></label>
+            <label>female: <input type="radio" value="f" name="gender"></label>
+            <label>other: <input type="radio" value="o" name="gender"></label>
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <select name="town" id="" multiple>
+                <optgroup label="towns">
+                    <option value="1">София</option>
+                    <option value="2">Варна</option>
+                    <option value="3">Бургас</option>
+                </optgroup>
+                <optgroup label="vilages">
+                    <option value="4">Vilage 1</option>
+                    <option value="5">Vilage 2</option>
+                    <option value="6">Vilage 3</option>
+                </optgroup>
+
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Comment:</legend>
+            <textarea name="comment"  cols="100" rows="10"></textarea>
+        </fieldset>
+        <button>Send</button>
+        <!-- userName=Ada&gender=on -->
+        <!-- userName=Ada&gender=on&town= -->
+        <!-- userName=Ada&gender=f&town=2 -->
+        <!-- userName=&town=1&town=2&town=3 -->
+    </form>
+</body>
+</html>
