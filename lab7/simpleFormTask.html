@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Task</title>
+</head>
+<body>
+    <h2>Регистрация</h2>
+    <form action="/back-end/registration.py">
+        <fieldset>
+            <legend>Лични данни</legend>
+            <label>Име: <input type="text" name="userName" placeholder="малко име, на латиница"></label><br>
+            <label>Име: <input type="text" name="userSurName" placeholder="фамилия, на латиница"></label><br>
+            Пол:
+            <label>мъж: <input type="radio" name="gender" value="m"></label>
+            <label>жена: <input type="radio" name="gender" value="f"></label>
+        </fieldset>
+        Коментар:<br>
+        <textarea name="comment" id="" cols="30" rows="3"></textarea><br>
+        <button>Изпрати</button>
+    </form>
+</body>
+</html>

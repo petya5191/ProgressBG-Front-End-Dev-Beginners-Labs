@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="/cgi-bin/reg.php" method="get">
+        <h1>Forms</h1>
+        <div>user name: <input
+            type="text"
+            name="userName"
+            autocomplete="off"
+            placeholder="enter user name"
+            size="5"></div>
+        <div>email: <input type="email" name="mail" autofocus></div>
+        <div>pass: <input type="password" name="pass"></div>
+        <div>age: <input type="number" name="age"></div>
+        <div>tel: <input type="tel" name="tel"></div>
+
+        <fieldset>
+            <label for="o">male:</label> <input id="gdr" type="radio" name="gender" value="m">
+
+            <label>female: <input type="radio" name="gender" value="f"></label>
+
+            other: <input id="o" type="radio" name="gender" value="o">
+        </fieldset>
+        <fieldset>
+            <legend>Drinks</legend>
+            tea: <input type="checkbox" name="drinks" value="1">
+            beer: <input type="checkbox" name="drinks" value="2">
+            wine: <input type="checkbox" name="drinks" value="3">
+        </fieldset>
+        <fieldset>
+            <legend>Населено място:</legend>
+            <select name="town" multiple>
+                <optgroup label="България">
+                    <option value="1">София</option>
+                    <option value="2">Бургас</option>
+                    <option value="3">Варна</option>
+                </optgroup>
+                <optgroup label="Франция">
+                    <option value="4" selected>Париж</option>
+                    <option value="5">Лондон</option>
+                    <option value="6">Виена</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Commetn:</legend>
+            <textarea name="comment" cols="5" rows="2"></textarea>
+        </fieldset>
+
+        <button>Send</button>
+        <button type="reset"><img src="download.png" alt="reset" width="14" height="14"></button>
+    </form>
+</body>
+</html>
