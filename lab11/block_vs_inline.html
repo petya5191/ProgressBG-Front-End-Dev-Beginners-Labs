@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs inline</title>
+    <style>
+        em{
+            border: 10px solid green
+        }
+        div{
+            border: 10px solid red;
+        }
+        div>div{
+            border: none;
+        }
+        span{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div>Par <div>AAA</div> aph 2</div>
+    <p>Lorem, <span>ipsum</span> dolor sit amet consectetur adipisicing elit. Labore suscipit maiores iure consequatur vitae dolore voluptatem. Ut, cum repellat officiis laborum repudiandae voluptas error, totam minus laboriosam exercitationem pariatur ducimus!</p>
+
+
+</body>
+</html>

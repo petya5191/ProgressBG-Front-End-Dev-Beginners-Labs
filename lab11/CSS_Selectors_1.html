@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div div{
+            border: 5px solid red;
+        }
+        [title^="b"]{
+            border: 5px solid green;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="picture.png"><img src="picture.png" alt="picture" width="50"></a>
+
+    <img src="picture.png" alt="img1" title="b1">
+    <img src="picture.png" alt="img2" title="window">
+    <img src="picture.png" alt="img3" title="b2">
+
+
+    <div id="parent">
+        <em>Parent div</em>
+        <div id="child">Child div</div>
+    </div>
+    <div>Other</div>
+</body>
+</html>
