@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margine collapse</title>
+    <style>
+        body{
+            /* border: 10px solid green; */
+            margin: 0;
+        }
+        .box{
+            background-color: red;
+            margin: 20px 0;
+        }
+        .b2{
+            margin-top: 100px;
+        }
+
+        .parent{
+            /* border: 1px solid green; */
+            background-color: orange;
+        }
+        .child{
+            margin: 50px 0;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="box b1">box 1</div>
+    <div class="box b2">box 2</div>
+    <hr>
+    <div class="parent">
+        <div class="child">.</div>
+    </div>
+</body>
+</html>
